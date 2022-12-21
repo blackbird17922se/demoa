@@ -1,0 +1,15 @@
+<div>
+    <h1>Listado de Productos</h1>
+</div>
+<hr>
+
+<div class="card mt-3 p-3" *ngFor="let producto of productos">
+
+    <h2>
+        <a [routerLink]="['productos/', producto.id]">
+            {{producto.nombre}}
+        </a>
+    </h2>
+    <div>Precio:{{producto.precio}}</div>
+
+</div>

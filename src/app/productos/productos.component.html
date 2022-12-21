@@ -1,0 +1,19 @@
+<p>Listado de productos</p>
+
+<ul>
+    <!-- Creamos una variable let usuario e iteramos CON NGFOR sobre el 
+        array usuarios-->
+    <li *ngFor="let usuario of usuarios">
+
+        <!-- Cada li contendra un valor del array -->
+        Nombre: {{usuario.nombre}}
+
+
+        <!-- USAREMOS NGIF PARA Q MUESTRE el span de La cuidad solo si 
+            usuario.ciudad viene con datos -->
+        <span *ngIf="usuario.ciudad.length > 0">
+            , Ciudad: 
+            <b>{{usuario.ciudad}}</b>
+        </span>
+    </li>
+</ul>
